@@ -13,6 +13,6 @@ CREATE TABLE albums (
                         release_date INT,
 --                         sales FLOAT UNSIGNED,
                         sales DECIMAL(4,2) UNSIGNED,
-                        genre VARCHAR(50)
+                        genre VARCHAR(50),
                         PRIMARY KEY (id)
 );
