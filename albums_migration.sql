@@ -1,3 +1,5 @@
+USE ryan;
+
 CREATE TABLE quotes (
                         id INT UNSIGNED NOT NULL AUTO_INCREMENT,
                         author_first_name VARCHAR(50) DEFAULT 'NONE',

@@ -16,7 +16,8 @@
 TRUNCATE albums;
 
 INSERT INTO albums (artist, name, release_date, genre, sales)
-VALUES ('Michael Jackson', 'Thriller', 1982, 'Pop, post-disco, funk, rock', '50.2'),
+VALUES
+    ('Michael Jackson', 'Thriller', 1982, 'Pop, post-disco, funk, rock', '50.2'),
     ('AC/DC', 'Back in Black', 1980, 'Hard rock', '30.1'),
     ('Whitney Houston', 'The Bodyguard', 1992, 'R&B, soul, pop, soundtrack', '28.7'),
     ('Pink Floyd', 'The Dark Side of the Moon', 1973, 'Progressive rock', '24.8'),
@@ -47,16 +48,17 @@ VALUES ('Michael Jackson', 'Thriller', 1982, 'Pop, post-disco, funk, rock', '50.
     ('Michael Jackson', 'Dangerous', 1991, 'New jack swing, R&B and pop', '17.0'),
     ('The Beatles', 'Abbey Road', 1969, 'Rock', '16.8')
 
--- The name of all albums by Pink Floyd
+-- select "The name of all albums by Pink Floyd"
 SELECT * FROM albums WHERE artist = 'Pink Floyd';
--- The year Sgt. Pepper's Lonely Hearts Club Band was released
+-- select "The year Sgt. Pepper's Lonely Hearts Club Band was released"
 SELECT release_date FROM albums WHERE name = 'Sgt.Peppers Lonely Hearts Club Band';
--- Which albums were released in the 1990s
+-- select "Albums were released in the 1990s"
 -- SELECT name,release_date FROM albums WHERE release_date BETWEEN 1990 AND 1999;
 SELECT * FROM albums WHERE release_date BETWEEN 1990 AND 1999
--- Which albums had less than 20 million certified sales
+-- select "Which albums had less than 20 million certified sales"
 SELECT * FROM albums WHERE sales BETWEEN 0 AND 19.99
--- All the albums with a genre of "Rock". Why do these query results not include albums with a genre of "Hard rock" or "Progressive rock"?
+-- select "All the albums with a genre of "Rock" "
+-- Why do these query results not include albums with a genre of "Hard rock" or "Progressive rock"?
 -- Not able to parse through a string. Only looking for a singular instance of Rock?
 -- now they do include it, with LIKE
 SELECT * FROM albums WHERE (genre) LIKE '%rock%'
