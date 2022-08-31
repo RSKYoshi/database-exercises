@@ -4,11 +4,15 @@ USE employees;
 
 # 1 HERE!!
 # Update your queries for employees whose names start and end with 'E'. Use concat() to combine their first and last name together as a single column in your results.
-SELECT CONCAT(first_name, last_name), emp_no
+SELECT CONCAT(first_name, last_name) as full_Name, emp_no
 FROM employees
 WHERE LEFT(last_name, 1) IN ('E')
-   OR RIGHT(last_name, 1) IN  ('E');
-SELECT CONCAT('Hello ', 'Codeup', '!');
+   AND RIGHT(last_name, 1) IN  ('E');
+# SELECT CONCAT('Hello ', 'Codeup', '!');
+
+# SELECT now(), date_add(now(), interval +1 week);
+# SELECT 3 characters, starting with the 5th char from the start of string
+# SELECT SUBSTR('QUADRATICALLY',5,3);
 
 #2 HERE!!
 # Find all employees born on Christmas — 842 rows.

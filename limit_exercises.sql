@@ -32,4 +32,8 @@ SELECT emp_no
 FROM salaries
 WHERE salary
 ORDER BY salary desc
-LIMIT 4 OFFSET 46;
+# offset is quantity to skip over each page
+# formula for offset:
+# ( desired_page_number * limit_amount - limit amount )
+# 10 pages wanted...limit by 5..... minus 5 = 45
+LIMIT 5 OFFSET 45;
